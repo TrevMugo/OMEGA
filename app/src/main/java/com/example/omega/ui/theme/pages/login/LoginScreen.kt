@@ -77,26 +77,20 @@ fun LoginScreen(navController: NavHostController, modifier: Modifier = Modifier)
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text(
-            text = "Welcome !",
-            color = Color.White,
-            fontSize = 30.sp,
-            fontFamily = FontFamily.Monospace,
-            textDecoration = TextDecoration.Underline
-        )
 
+        Icon(painter = painterResource(id = R.drawable.omega),
+            null,Modifier.size(80.dp),
+            tint = Color.Red)
         Text(
             text = "Login Here",
-            color = Color.White,
+            color = Color.Red,
             fontSize = 25.sp,
             fontFamily = FontFamily.Monospace
         )
 
         Spacer(modifier = Modifier.height(20.dp))
 
-        Icon(painter = painterResource(id = R.drawable.omega),
-            null,Modifier.size(80.dp),
-            tint = Color.Gray)
+
 
         Spacer(modifier = Modifier.height(20.dp))
 
