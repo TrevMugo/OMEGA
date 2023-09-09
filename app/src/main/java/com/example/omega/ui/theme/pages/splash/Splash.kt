@@ -28,7 +28,7 @@ import com.example.omega.ui.theme.OmegaTheme
 import kotlinx.coroutines.delay
 
 @Composable
-fun Splash(navController: NavHostController,modifier: Modifier = Modifier) {
+fun Splash(navController: NavHostController) {
 LaunchedEffect(key1 = true){
     delay(2000L)
     navController.navigate(ROUTE_HOME)
@@ -67,12 +67,6 @@ LaunchedEffect(key1 = true){
             color = Color.Red,
             fontSize = 20.sp
         )
-
-
-
-
-
-
 
     }
 }

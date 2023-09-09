@@ -46,7 +46,6 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.input.VisualTransformation
-import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -123,12 +122,15 @@ focusManager.clearFocus()
         Row(verticalAlignment = Alignment.CenterVertically) {
             Text(text = "Don't have an account?", color = Color.White)
             TextButton(onClick = {navController.navigate(ROUTE_SIGNUP)}) {
-                Text("SignUp!") } }
+                Text("SignUp!", color = Color.Red) } }
 
         Spacer(modifier = Modifier.height(180.dp))
 
-        Button(onClick = {navController.navigate(ROUTE_HOME)}, Modifier.width(250.dp)) {
-            Text(text = "BACK TO HOME", Modifier.padding(vertical = 10.dp))
+        Button(
+            onClick = {navController.navigate(ROUTE_HOME)},
+            Modifier.width(250.dp),
+            colors =ButtonDefaults.buttonColors(Color.Red)) {
+            Text(text = "BACK TO HOME", Modifier.padding(vertical = 10.dp),)
         }
     }
 }
@@ -149,7 +151,8 @@ sealed class InputType(
     object Password:InputType(
         label = "Password",
         icon = Icons.Default.Lock,
-        keyboardOptions = KeyboardOptions(imeAction = ImeAction.Done, keyboardType = KeyboardType.Password),
+        keyboardOptions = KeyboardOptions(
+            imeAction = ImeAction.Done, keyboardType = KeyboardType.Password),
         visualTransformation = PasswordVisualTransformation()
     )
 

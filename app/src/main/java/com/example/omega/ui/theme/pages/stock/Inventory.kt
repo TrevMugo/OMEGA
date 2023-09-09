@@ -1,4 +1,4 @@
-package com.example.omega.ui.theme.pages
+package com.example.omega.ui.theme.pages.stock
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -134,7 +134,7 @@ Spacer(modifier = Modifier.height(30.dp))
 Row(verticalAlignment = Alignment.CenterVertically) {
 Text(text = "Nothing to see here?", color = Color.Cyan)
     TextButton(onClick = {navController.navigate(ROUTE_HOME)}) {
-        Text(text = "Back to Home")
+        Text(text = "Back to Home", color = Color.Red)
     }
 
 

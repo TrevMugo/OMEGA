@@ -6,7 +6,8 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.omega.ui.theme.pages.Inventory
+import com.example.omega.ui.theme.pages.aboutapp.AboutApp
+import com.example.omega.ui.theme.pages.stock.Inventory
 import com.example.omega.ui.theme.pages.home.HomeScreen
 import com.example.omega.ui.theme.pages.login.LoginScreen
 import com.example.omega.ui.theme.pages.signup.SignUpScreen
@@ -58,6 +59,9 @@ fun AppNavHost(
             DeleteStock(navController)
         }
 
+        composable(ABOUTAPP){
+            AboutApp(navController)
+        }
 
 
     }

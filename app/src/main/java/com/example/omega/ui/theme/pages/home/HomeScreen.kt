@@ -24,13 +24,13 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.omega.R
+import com.example.omega.navigation.ABOUTAPP
 import com.example.omega.navigation.INVENTORY
 import com.example.omega.navigation.ROUTE_LOGIN
 import com.example.omega.navigation.ROUTE_SIGNUP
@@ -132,7 +132,7 @@ Row(verticalAlignment = Alignment.CenterVertically) {
         text = "About the App.",
         color =Color.Cyan,
         fontFamily = FontFamily.SansSerif,)
-    TextButton(onClick = {}) {
+    TextButton(onClick = {navController.navigate(ABOUTAPP)}) {
         Text(text = "Learn More", color = Color.Red) }
 }
 
