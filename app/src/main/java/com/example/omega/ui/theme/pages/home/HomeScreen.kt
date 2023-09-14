@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Divider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -91,41 +92,18 @@ fun HomeScreen(navController:NavHostController) {
                 fontSize = 20.sp,
                 modifier =  Modifier.padding()) }
 
+        Divider(
+            color = Color.White,
+            thickness = 2.dp,
+            modifier = Modifier.padding(10.dp)
+        )
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Text(text = "Don't have an account?", color = Color.White, fontSize = 22.sp, fontFamily = FontFamily.SansSerif)
+            TextButton(onClick = {navController.navigate(ROUTE_SIGNUP)}) {
+                Text("SignUp!", color = Color.Cyan,fontSize = 22.sp, fontFamily = FontFamily.SansSerif) } }
 
 
             Spacer(modifier = Modifier.height(20.dp))
-
-
-
-            Button(
-                onClick = {navController.navigate(ROUTE_SIGNUP)},
-                modifier = Modifier.fillMaxWidth(),
-                colors = ButtonDefaults.buttonColors(Color.Red),
-
-            ) { Text(text = "SIGNUP",
-                color = Color.White,
-                fontSize = 20.sp,) }
-
-
-
-
-
-
-
-
-        Spacer(modifier = Modifier.height(300.dp))
-
-
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            TextButton(onClick = {navController.navigate(INVENTORY)}) {
-                Text(text = "To other pages", color = Color.Red)
-            }
-        }
-
-
-        Spacer(modifier = Modifier.height(15.dp))
-
-
 
 Row(verticalAlignment = Alignment.CenterVertically) {
     Text(
